@@ -1,0 +1,51 @@
+<title>Bodt titlea</title>
+<section class="home">
+    <section class="secetion-artical">
+        <% articals.forEach(function(artical,index) {%>
+            <div class="articals">
+                <div class="title-div">
+                    <h2 class="artical-title">
+                        <%= artical.title%>
+                    </h2>
+                    <hr class="title-below">
+                </div>
+                <h6 class="author-name"> <u> <%= artical.author%></u></h6>
+                <div class="artical-img-div"><img src="/images/<%= artical.image%>" alt="" class="artical-img">
+                    <i>Image Realted Some Thing</i>
+                </div>
+
+                <p class="artical">
+                    <%= artical.para1%>
+                </p>
+                <div class="artical-img-div"><img src="/images/<%= artical.image%>" alt="" class="artical-img">
+                    <i>Image Realted Some Thing</i>
+                </div>
+
+                <p class="artical">
+                    <p class="artical">
+                        <%= artical.para2%>
+                    </p>
+                    <div class="artical-img-div"><img src="/images/<%= artical.image%>" alt="" class="artical-img">
+                        <i>Image Realted Some Thing</i>
+                    </div>
+
+                    <p class="artical">
+                        <%= artical.para3%>
+                    </p>
+                    <hr>
+            </div>
+            <% })%>
+    </section>
+    <aside>
+        <ol class="homeOl">
+            <% articals.forEach(function(artical) {%>
+                <li>
+                    <a href="<%= artical._id%>">
+                        <%= artical.title%>
+                    </a>
+                </li>
+                <% })%>
+        </ol>
+    </aside>
+</section>
+<button class="btn pl-5 text-white">Bootstrap</button>
